@@ -1,0 +1,22 @@
+package com.example.mvvmcounter
+
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.lifecycle.ViewModel
+
+
+class CounterViewModel: ViewModel() {
+    private var _count=mutableIntStateOf(0)
+    val count:MutableState<Int> = _count;
+
+    fun increment()
+    {
+        _count.intValue++;
+    }
+    fun decrement()
+    {
+        _count.intValue--;
+    }
+
+
+}
